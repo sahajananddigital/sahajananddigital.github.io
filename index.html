@@ -1,9 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source | Sahajanand Digital</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
 
-<h1>Hello World!!</h1>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-<p>Our Main Wesite -> <a href="https://sahajananddigital.in">sahajananddigital.in</a></p>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-<p>See Our Latest Open Source products at <a href="https://github.com/sahajananddigital">Github</a></p>
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
 
-<p>Our Product Developed for Shree Swaminarayan Gurukul 
-<a href="https://sahajananddigital.github.io/harismruti-path-tracker/">HariSmruti Path Tracker</a></p>
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .links {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card h3 a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .card h3 a:hover {
+            color: var(--primary);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .card-footer a {
+            font-size: 0.9rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .card-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+        
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sahajanand Digital</h1>
+    <p>Web Development, Automation, Server Management, and Open Source Projects.</p>
+    <div class="links">
+        <a href="https://sahajananddigital.in" class="btn" target="_blank">Main Website</a>
+        <a href="https://github.com/sahajananddigital" class="btn btn-outline" target="_blank">GitHub Profile</a>
+        <a href="mailto:hello@sahajananddigital.in" class="btn btn-outline">Contact Us</a>
+    </div>
+</header>
+
+<main>
+<h2 class="section-title">Server & Hosting</h2>
+<div class="grid">
+
+        <div class="card">
+            <h3><a href="projects/android-sms-gateway/index.html">android-sms-gateway</a></h3>
+            <p>The SMS Gateway for Android™ app enables sending and receiving SMS messages through an API that can be accessed directly on the device or via a cloud server when direct device access is not possible.</p>
+            <div class="card-footer">
+                <a href="projects/android-sms-gateway/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://docs.sms-gate.app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/cipi/index.html">cipi</a></h3>
+            <p>Install and manage your server like a pro! With Cipi you don’t need to be a Sys Admin to deploy and manage websites and PHP applications powered by cloud VPS.</p>
+            <div class="card-footer">
+                <a href="projects/cipi/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://cipi.sh" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/FOSSBilling/index.html">FOSSBilling</a></h3>
+            <p>Empower your hosting business with FOSSBilling, the free and open-source solution for efficient billing and client management.</p>
+            <div class="card-footer">
+                <a href="projects/FOSSBilling/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://fossbilling.org" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/hestiacp/index.html">hestiacp</a></h3>
+            <p>Hestia Control Panel | A lightweight and powerful control panel for the modern web.</p>
+            <div class="card-footer">
+                <a href="projects/hestiacp/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://www.hestiacp.com/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/Cloudflare-Bulk-DNS-Delete/index.html">Cloudflare-Bulk-DNS-Delete</a></h3>
+            <p>Python Script to bulk delete DNS records from Cloudflare.</p>
+            <div class="card-footer">
+                <a href="projects/Cloudflare-Bulk-DNS-Delete/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/Cloudflare-Bulk-DNS-Delete" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/docker-setups/index.html">docker-setups</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/docker-setups/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/docker-setups" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/fossbilling-razorpay-payment-gateway/index.html">fossbilling-razorpay-payment-gateway</a></h3>
+            <p>This is the opensource payment gateway for FOSSBilling software</p>
+            <div class="card-footer">
+                <a href="projects/fossbilling-razorpay-payment-gateway/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/fossbilling-razorpay-payment-gateway" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/HestiaCP-API/index.html">HestiaCP-API</a></h3>
+            <p>HestiaCP API SDK written in PHP</p>
+            <div class="card-footer">
+                <a href="projects/HestiaCP-API/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/HestiaCP-API" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/HestiaCP-WordPress-Plugin/index.html">HestiaCP-WordPress-Plugin</a></h3>
+            <p>Hestia CP WordPress Plugin manage your server and sell subscriptions</p>
+            <div class="card-footer">
+                <a href="projects/HestiaCP-WordPress-Plugin/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/HestiaCP-WordPress-Plugin" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/sahajanand-server/index.html">sahajanand-server</a></h3>
+            <p>Server infrastructure for Sahajanand Digital</p>
+            <div class="card-footer">
+                <a href="projects/sahajanand-server/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/sahajanand-server" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/server-setup/index.html">server-setup</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/server-setup/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/server-setup" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/shajanand-server-client/index.html">shajanand-server-client</a></h3>
+            <p>client application for sahajanand-server</p>
+            <div class="card-footer">
+                <a href="projects/shajanand-server-client/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/shajanand-server-client" target="_blank">Live Demo</a>
+            </div>
+        </div></div>
+<h2 class="section-title">WordPress & Plugins</h2>
+<div class="grid">
+
+        <div class="card">
+            <h3><a href="projects/ElasticPress/index.html">ElasticPress</a></h3>
+            <p>A fast and flexible search and query engine for WordPress.</p>
+            <div class="card-footer">
+                <a href="projects/ElasticPress/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://elasticpress.io" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/rtbiz-assets/index.html">rtbiz-assets</a></h3>
+            <p>Assets Management for WordPress</p>
+            <div class="card-footer">
+                <a href="projects/rtbiz-assets/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/rtcamp/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/static-wordpress-playground/index.html">static-wordpress-playground</a></h3>
+            <p>Run WordPress in the browser via WebAssembly PHP</p>
+            <div class="card-footer">
+                <a href="projects/static-wordpress-playground/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://playground.sahajananddigital.in/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/wocoommerce-bulk-product-update/index.html">wocoommerce-bulk-product-update</a></h3>
+            <p>WooCommerce bulk product update</p>
+            <div class="card-footer">
+                <a href="projects/wocoommerce-bulk-product-update/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://sahajananddigital.github.io/wocoommerce-bulk-product-update/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/event-manager/index.html">event-manager</a></h3>
+            <p>WordPress Event Manager</p>
+            <div class="card-footer">
+                <a href="projects/event-manager/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/event-manager" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/location-picker-for-woocommerce-checkout/index.html">location-picker-for-woocommerce-checkout</a></h3>
+            <p>[WIP] Location picker for woocommerce checkout</p>
+            <div class="card-footer">
+                <a href="projects/location-picker-for-woocommerce-checkout/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/location-picker-for-woocommerce-checkout" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/quickwp/index.html">quickwp</a></h3>
+            <p>The plugin side of QuickWP</p>
+            <div class="card-footer">
+                <a href="projects/quickwp/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/quickwp" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/Simple-ERP-for-WordPress/index.html">Simple-ERP-for-WordPress</a></h3>
+            <p>Simple ERP for WordPress as a plugin using Gutenberg UI </p>
+            <div class="card-footer">
+                <a href="projects/Simple-ERP-for-WordPress/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/Simple-ERP-for-WordPress" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/woocommerce-conditional-shipping-and-payments/index.html">woocommerce-conditional-shipping-and-payments</a></h3>
+            <p>WooCommerce - Conditional Shipping and Payments</p>
+            <div class="card-footer">
+                <a href="projects/woocommerce-conditional-shipping-and-payments/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/woocommerce-conditional-shipping-and-payments" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/woocommerce-simple-customizations/index.html">woocommerce-simple-customizations</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/woocommerce-simple-customizations/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/woocommerce-simple-customizations" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/wordpress-plugins/index.html">wordpress-plugins</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/wordpress-plugins/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/wordpress-plugins" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/wordpress-simple-customise-helper/index.html">wordpress-simple-customise-helper</a></h3>
+            <p>Simple customise helper</p>
+            <div class="card-footer">
+                <a href="projects/wordpress-simple-customise-helper/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/wordpress-simple-customise-helper" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/wordpress-site-generator/index.html">wordpress-site-generator</a></h3>
+            <p>WordPress site generator with AI</p>
+            <div class="card-footer">
+                <a href="projects/wordpress-site-generator/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/wordpress-site-generator" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/wp-packages/index.html">wp-packages</a></h3>
+            <p>Monorepo with the various WordPress NPM packages I maintain.</p>
+            <div class="card-footer">
+                <a href="projects/wp-packages/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/wp-packages" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/wp-plugin-sahajanand-customise-helper/index.html">wp-plugin-sahajanand-customise-helper</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/wp-plugin-sahajanand-customise-helper/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/wp-plugin-sahajanand-customise-helper" target="_blank">Live Demo</a>
+            </div>
+        </div></div>
+<h2 class="section-title">Automation & Tools</h2>
+<div class="grid">
+
+        <div class="card">
+            <h3><a href="projects/apps-script-starter/index.html">apps-script-starter</a></h3>
+            <p>Setup a local development environment inside Visual Studio Code and build Google Workspace add-ons with Google Apps Script</p>
+            <div class="card-footer">
+                <a href="projects/apps-script-starter/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://www.youtube.com/watch?v=KxdCIbeO4Uk" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/certificate/index.html">certificate</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/certificate/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://certificate.sahajananddigital.in" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/csv-to-labels/index.html">csv-to-labels</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/csv-to-labels/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://sahajananddigital.github.io/csv-to-labels/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/example-google-apps-script/index.html">example-google-apps-script</a></h3>
+            <p>Google Apps Script example to send SMS via SMS Gateway for Android™.</p>
+            <div class="card-footer">
+                <a href="projects/example-google-apps-script/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://sms-gate.app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/id-card-generator/index.html">id-card-generator</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/id-card-generator/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://swaminarayan-gurukul.github.io/id-card-generator/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/printing-tools/index.html">printing-tools</a></h3>
+            <p>Printing Tools</p>
+            <div class="card-footer">
+                <a href="projects/printing-tools/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="http://opensource.sahajananddigital.in/printing-tools/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/automated-attendance/index.html">automated-attendance</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/automated-attendance/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/automated-attendance" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/classp-google-apps-script-setup/index.html">classp-google-apps-script-setup</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/classp-google-apps-script-setup/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/classp-google-apps-script-setup" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/gurukul-account-manager/index.html">gurukul-account-manager</a></h3>
+            <p>Built with Google Apps script - Gurukul Vouchers, Invoice, Expenses, Food Pass etc</p>
+            <div class="card-footer">
+                <a href="projects/gurukul-account-manager/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/gurukul-account-manager" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/smart-attendance/index.html">smart-attendance</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/smart-attendance/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/smart-attendance" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/workflows/index.html">workflows</a></h3>
+            <p>Our Automated Workflow Files</p>
+            <div class="card-footer">
+                <a href="projects/workflows/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/workflows" target="_blank">Live Demo</a>
+            </div>
+        </div></div>
+<h2 class="section-title">Business & Management</h2>
+<div class="grid">
+
+        <div class="card">
+            <h3><a href="projects/books/index.html">books</a></h3>
+            <p>Free Accounting Software</p>
+            <div class="card-footer">
+                <a href="projects/books/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://frappe.io/books" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/chaskiq/index.html">chaskiq</a></h3>
+            <p>A full featured Live Chat, Support & Marketing platform, alternative to Intercom, Drift, Crisp, etc ...</p>
+            <div class="card-footer">
+                <a href="projects/chaskiq/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://chaskiq.io" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/erpnext/index.html">erpnext</a></h3>
+            <p>Free and Open Source Enterprise Resource Planning (ERP)</p>
+            <div class="card-footer">
+                <a href="projects/erpnext/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://erpnext.com" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/gurukul-food-inventory-management/index.html">gurukul-food-inventory-management</a></h3>
+            <p>This Application is used to manage the food Inventory for the daily usage</p>
+            <div class="card-footer">
+                <a href="projects/gurukul-food-inventory-management/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://sahajananddigital.github.io/gurukul-food-inventory-management/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/rt-hrm/index.html">rt-hrm</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/rt-hrm/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/rtcamp/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/sahajanand-project-manager/index.html">sahajanand-project-manager</a></h3>
+            <p>Project Management </p>
+            <div class="card-footer">
+                <a href="projects/sahajanand-project-manager/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/rtcamp/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/support-agent/index.html">support-agent</a></h3>
+            <p>:crystal_ball: A lightweight comments widget built on GitHub issues</p>
+            <div class="card-footer">
+                <a href="projects/support-agent/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://utteranc.es" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/community-support/index.html">community-support</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/community-support/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/community-support" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/Gst-Helper/index.html">Gst-Helper</a></h3>
+            <p>Gst Helper is a command-line application built using node js to help users to automate the download and uploads of GST Returns.</p>
+            <div class="card-footer">
+                <a href="projects/Gst-Helper/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/Gst-Helper" target="_blank">Live Demo</a>
+            </div>
+        </div></div>
+<h2 class="section-title">Communication</h2>
+<div class="grid">
+
+        <div class="card">
+            <h3><a href="projects/send-bulk-sms/index.html">send-bulk-sms</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/send-bulk-sms/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://sahajananddigital.github.io/send-bulk-sms/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/Whatsapp-Chat-Widget/index.html">Whatsapp-Chat-Widget</a></h3>
+            <p>A Simple Whatsapp Widget for your Website</p>
+            <div class="card-footer">
+                <a href="projects/Whatsapp-Chat-Widget/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://imlolman.github.io/Whatsapp-Chat-Widget/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/whatsapp-web.js/index.html">whatsapp-web.js</a></h3>
+            <p>A WhatsApp client library for NodeJS that connects through the WhatsApp Web browser app</p>
+            <div class="card-footer">
+                <a href="projects/whatsapp-web.js/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://wwebjs.dev" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/send-bulk-whatsapp/index.html">send-bulk-whatsapp</a></h3>
+            <p>Send Bulk Whatsapp message</p>
+            <div class="card-footer">
+                <a href="projects/send-bulk-whatsapp/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/send-bulk-whatsapp" target="_blank">Live Demo</a>
+            </div>
+        </div></div>
+<h2 class="section-title">Education & Social</h2>
+<div class="grid">
+
+        <div class="card">
+            <h3><a href="projects/invitation/index.html">invitation</a></h3>
+            <p>Invitation card maker software</p>
+            <div class="card-footer">
+                <a href="projects/invitation/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://swaminarayan-gurukul.github.io/invitation/aaj-mare-orde-re/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/music-learning/index.html">music-learning</a></h3>
+            <p>Music Learning</p>
+            <div class="card-footer">
+                <a href="projects/music-learning/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="http://opensource.sahajananddigital.in/music-learning/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/online-peer-to-peer-quiz/index.html">online-peer-to-peer-quiz</a></h3>
+            <p>This we are thinking to make peer to peer game that includes link sharing and that link can be played online.</p>
+            <div class="card-footer">
+                <a href="projects/online-peer-to-peer-quiz/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://sahajananddigital.github.io/online-peer-to-peer-quiz/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/selfie-maker/index.html">selfie-maker</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/selfie-maker/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://amrut-selfie.sahajananddigital.in/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/selfie.sahajananddigital.in/index.html">selfie.sahajananddigital.in</a></h3>
+            <p>Selfie Website - Get Link from the Readme</p>
+            <div class="card-footer">
+                <a href="projects/selfie.sahajananddigital.in/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://selfie.sahajananddigital.in" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/gurukul-alumni-students-manager/index.html">gurukul-alumni-students-manager</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/gurukul-alumni-students-manager/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/gurukul-alumni-students-manager" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/learning-assignment/index.html">learning-assignment</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/learning-assignment/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/learning-assignment" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/photo-frame-react/index.html">photo-frame-react</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/photo-frame-react/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/photo-frame-react" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/satsang-app/index.html">satsang-app</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/satsang-app/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/satsang-app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/student-portal/index.html">student-portal</a></h3>
+            <p>Student Portal</p>
+            <div class="card-footer">
+                <a href="projects/student-portal/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/student-portal" target="_blank">Live Demo</a>
+            </div>
+        </div></div>
+<h2 class="section-title">Other Projects</h2>
+<div class="grid">
+
+        <div class="card">
+            <h3><a href="projects/easyappointments/index.html">easyappointments</a></h3>
+            <p>:date: Easy!Appointments - Self Hosted Appointment Scheduler</p>
+            <div class="card-footer">
+                <a href="projects/easyappointments/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://easyappointments.org" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/harismruti-path-tracker/index.html">harismruti-path-tracker</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/harismruti-path-tracker/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://sahajananddigital.github.io/harismruti-path-tracker/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/hr-management-static-website/index.html">hr-management-static-website</a></h3>
+            <p>Manage HR Systems with Google Sheets</p>
+            <div class="card-footer">
+                <a href="projects/hr-management-static-website/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="http://opensource.sahajananddigital.in/hr-management-static-website/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/mirotalk/index.html">mirotalk</a></h3>
+            <p>🚀 WebRTC - P2P - Simple, Secure, Fast Real-Time Video Conferences Up to 4k and 60fps, compatible with all browsers and platforms.</p>
+            <div class="card-footer">
+                <a href="projects/mirotalk/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://p2p.mirotalk.com" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/sahajananddigital.in/index.html">sahajananddigital.in</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/sahajananddigital.in/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://sahajananddigital.in" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/status/index.html">status</a></h3>
+            <p>Status website for Sahajanand Digital</p>
+            <div class="card-footer">
+                <a href="projects/status/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://sahajananddigital.github.io/status" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/TastyIgniter/index.html">TastyIgniter</a></h3>
+            <p>:fire: Powerful, yet easy to use, open-source online ordering, table reservation and management system for restaurants</p>
+            <div class="card-footer">
+                <a href="projects/TastyIgniter/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://tastyigniter.com" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/figma-plugin-passport-size-photo/index.html">figma-plugin-passport-size-photo</a></h3>
+            <p>Passport Size Photo Maker Figma Plugin</p>
+            <div class="card-footer">
+                <a href="projects/figma-plugin-passport-size-photo/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/figma-plugin-passport-size-photo" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/github-updater/index.html">github-updater</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/github-updater/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/github-updater" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/product-nfc-contact-website/index.html">product-nfc-contact-website</a></h3>
+            <p>No description available.</p>
+            <div class="card-footer">
+                <a href="projects/product-nfc-contact-website/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/product-nfc-contact-website" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/ReactEcommerceStoreWithStripeAPI/index.html">ReactEcommerceStoreWithStripeAPI</a></h3>
+            <p>The full project created for the Brad Traversy video</p>
+            <div class="card-footer">
+                <a href="projects/ReactEcommerceStoreWithStripeAPI/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/ReactEcommerceStoreWithStripeAPI" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/timetracker/index.html">timetracker</a></h3>
+            <p>Simple, easy to use, open source time tracking system.</p>
+            <div class="card-footer">
+                <a href="projects/timetracker/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/timetracker" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3><a href="projects/workboard/index.html">workboard</a></h3>
+            <p>WorkBoard is an internal work management system built on Frappe Framework.</p>
+            <div class="card-footer">
+                <a href="projects/workboard/index.html">Details &rarr;</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">|</span>
+                <a href="https://github.com/sahajananddigital/workboard" target="_blank">Live Demo</a>
+            </div>
+        </div></div>
+
+</main>
+
+<footer class="footer">
+    <p>&copy; 2026 Sahajanand Digital. All rights reserved.</p>
+    <p>Follow us on <a href="https://twitter.com/SahajanandDgtal" target="_blank">Twitter/X</a></p>
+</footer>
+
+</body>
+</html>
